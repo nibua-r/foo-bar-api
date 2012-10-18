@@ -1,30 +1,15 @@
 class FoosController < ApplicationController
-  # GET /foos
-  # GET /foos.json
+  before_filter :get_foo, only: [:show, :update, :destroy]
+
   def index
     @foos = Foo.all
-
-    render json: @foos
+    render json: @foos, status: :ok
   end
 
-  # GET /foos/1
-  # GET /foos/1.json
   def show
-    @foo = Foo.get(params[:id])
-
-    render json: @foo
+    render json: @foo, status: :ok, location: @foo
   end
 
-  # GET /foos/new
-  # GET /foos/new.json
-  def new
-    @foo = Foo.new
-
-    render json: @foo
-  end
-
-  # POST /foos
-  # POST /foos.json
   def create
     @foo = Foo.new(params[:foo])
 
@@ -35,24 +20,26 @@ class FoosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /foos/1
-  # PATCH/PUT /foos/1.json
   def update
-    @foo = Foo.get(params[:id])
-
     if @foo.update(params[:foo])
-      head :no_content
+      head :ok
     else
       render json: @foo.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /foos/1
-  # DELETE /foos/1.json
   def destroy
-    @foo = Foo.get(params[:id])
-    @foo.destroy
-
-    head :no_content
+    if @foo.destroy
+      head :no_content
+    else
+      render json: @foo.errors
+    end
   end
+
+  private
+  def get_foo
+    @foo = Foo.get(params[:id])
+    head :not_found if @foo.nil?
+  end
+
 end
