@@ -1,7 +1,7 @@
 FooBarApi::Application.routes.draw do
 
-  resources :foos, except: :edit, defaults: { format: :json } do
-    resources :bars, except: :edit, defaults: { format: :json }
+  resources :foos, except: [:new, :edit], defaults: { format: :json } do
+    resources :bars, except: [:new, :edit], defaults: { format: :json }
   end
 
   # The priority is based upon order of creation:
