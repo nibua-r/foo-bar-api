@@ -6,13 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 50.times do
-  Foo.create(word: /\w+/.gen,
-             sentence: /[:sentence:]/.gen,
+  Foo.create(qux: /\w+/.gen,
+             quux: /[:sentence:]/.gen,
              bars:
              rand(0..3).times.collect do
-               Bar.create(integer: rand(1.terabyte),
-                          float: rand,
-                          boolean: [true, false].sample)
+               Bar.create(baz: rand(1.terabyte),
+                          corge: rand,
+                          grault: [true, false].sample,
+                          garply: DateTime.now)
              end
              )
 end
