@@ -24,7 +24,7 @@ To set the newly installed ruby as default (optionnal):
 
 You need `bundler` to manage the project's dependencies:
 
-    $ gem install bundler
+    $ gem install bundler && rbenv rehash
 
 ## Clone the project and install the dependencies
 
