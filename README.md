@@ -15,12 +15,12 @@ Obviously enough, you need ruby to use this project. So, install ruby using `rbe
     $ mkdir -p ~/.rbenv/plugins
     $ cd ~/.rbenv/plugins
     $ git clone https://github.com/sstephenson/ruby-build.git
-    $ rbenv install 1.9.3-p286
+    $ rbenv install 1.9.3-p327
     $ rbenv rehash
 
 To set the newly installed ruby as default (optionnal):
 
-    $ rbenv global 1.9.3-p286
+    $ rbenv global 1.9.3-p327
 
 You need `bundler` to manage the project's dependencies:
 
