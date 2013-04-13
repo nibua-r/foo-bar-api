@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-RAILS_VERSION = '~> 3.2.8'
-RSPEC_VERSION = '~> 2.11.0'
+RAILS_VERSION = '~> 3.2.13'
+RSPEC_VERSION = '~> 2.13.0'
 DATAMAPPER    = 'http://github.com/datamapper'
 
 gem 'randexp'
