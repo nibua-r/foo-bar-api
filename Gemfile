@@ -55,5 +55,5 @@ group :test do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'spork-rails'
-  gem 'rb-inotify', '~> 0.8.8'
+  gem 'rb-inotify', '~> 0.9.0'
 end
