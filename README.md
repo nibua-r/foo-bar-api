@@ -1,6 +1,6 @@
 # FooBarApi
 
-A simple/stupid rails-api (3.2.8) project for json api testing.
+A simple/stupid rails-api project for json api testing.
 
 No authentication, DataMapper ORM with a sqlite database, only json, no comment, no query params…
 
@@ -15,12 +15,12 @@ Obviously enough, you need ruby to use this project. So, install ruby using `rbe
     $ mkdir -p ~/.rbenv/plugins
     $ cd ~/.rbenv/plugins
     $ git clone https://github.com/sstephenson/ruby-build.git
-    $ rbenv install 1.9.3-p327
+    $ rbenv install 2.0.0p0
     $ rbenv rehash
 
 To set the newly installed ruby as default (optionnal):
 
-    $ rbenv global 1.9.3-p327
+    $ rbenv global 2.0.0p0
 
 You need `bundler` to manage the project's dependencies:
 
